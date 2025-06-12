@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Responsive Product Grid</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            max-width: 180px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .product-card p {
+            color: #777;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .product-card button {
+            padding: 10px 15px;
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .product-card button:hover {
+            background-color: #005bb5;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .product-card {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Products</h1>
+    <div class="grid-container">
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-fkDfuXuNrvwDkrpt_R9hC_PFQ_SH5i_vfw&s" alt="Product 1">
+            <h3>Wireless Headphones</h3>
+            <p>$29.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST6ULRevmuTNy3ji3BO2vGHmyUgtnC2yp3tw&s" alt="Product 2">
+            <h3>Smartwatch</h3>
+            <p>$49.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgIv-2r9waQ-u99bw10cCEVgJ1EPuYGqPy9g&s" alt="Product 3">
+            <h3>Running Shoes</h3>
+            <p>$39.99</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIGJ5cIJAk0cwLjlDLH_PYBcU0fmMvBtXCyA&s" alt="Product 4">
+            <h3>Backpack</h3>
+            <p>$19.99</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</body>
+</html>
